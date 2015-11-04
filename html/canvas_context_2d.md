@@ -1,5 +1,5 @@
 canvas context2D 对象
-=====================
+====
 
 属性
 ----
@@ -368,5 +368,3 @@ restore()
 恢复栈中画布最近的状态。
 
 ###数据导出
-
-@TODO need to be review
