@@ -11,11 +11,6 @@ CSS 属性
 
 参考：[font](./font.md)
 
-自定义字体(@font-face)
-----
-
-参考：[font-face](./font-face.md)
-
 列表(list)
 ----
 

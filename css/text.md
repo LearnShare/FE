@@ -156,6 +156,14 @@ text-outline
 text-overflow
 ----
 
+规定处理文字溢出的方式：
+
++ clip 剪切切掉多余的部分
++ ellipsis 使用 `...` 作为结尾
++ 'str' 使用自定义字符串作为结尾
+
+可以使用一个或两个上面的值，来分别指定左侧和右侧的溢出处理方式。参考：[MDN: text-overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
+
 white-space
 ----
 

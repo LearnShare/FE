@@ -11,7 +11,7 @@ border-top-width
 1. thin 细
 2. medium 中等（默认）
 3. thick 粗
-4. 尺寸值
+4. 尺寸值（不支持百分比）
 
 border-top-style
 ----
