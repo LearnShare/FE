@@ -291,7 +291,8 @@ g(arg1, arg2, ...);
 内部函数可以访问到外部作用域的变量，并延续外部变量的生命周期的特征，叫做闭包。
 
 参考：[MDN: 闭包](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures)
-[闭包是什么？](http://www.cnblogs.com/seven-zh/p/4571020.html)
+[闭包是什么](http://www.cnblogs.com/seven-zh/p/4571020.html)
+[学习 JavaScript 闭包](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
 
 + 闭包函数可以使用函数作用域以外的变量；
 + 即时外部作用域已经销毁，闭包所使用的外部变量仍然被保存了下来。

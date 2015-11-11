@@ -91,6 +91,11 @@ JavaScript 语法
 
 参考：[statements](./statements.md)
 
+异常
+----
+
+参考：[exception](./exception.md)
+
 函数
 ----
 
@@ -115,3 +120,14 @@ ES 2015
 ----
 
 参考：[ES 2015](es-2015.md)
+
+专题
+----
+
+### 类型转换
+
+### 闭包
+
+### 类与继承
+
+### 模块
