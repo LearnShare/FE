@@ -233,7 +233,7 @@ var o = {
   y: 2
 };
 // 遍历属性，读取属性值
-for(p in o){
+for(var p in o){
   console.log(p + ": " + o[p]);
   // x: 1
   // y: 2

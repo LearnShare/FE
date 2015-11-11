@@ -1,6 +1,9 @@
 JavaScript 参考
 ====
 
+参考：[MDN: JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[MSDN: JavaScript]<https://msdn.microsoft.com/zh-cn/library/d1et7k7c(v=vs.94).aspx>
+
 概述
 ----
 
@@ -40,6 +43,11 @@ node test.js
 ```
 
 建议使用第二种方式。可以保存代码，并方便修改。在代码较多时，也不会产生相互干扰。
+
+严格模式
+----
+
+参考：[strict](./strict.md)
 
 JavaScript 语法
 ----
@@ -102,3 +110,8 @@ JavaScript 语法
 ----
 
 参考：[regexp](./regexp.md)
+
+ES 2015
+----
+
+参考：[ES 2015](es-2015.md)
