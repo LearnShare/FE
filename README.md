@@ -6,11 +6,10 @@ All about Front End development. 前端开发的一切。
 基础
 ----
 
-+ HTML
-+ CSS
-+ JavaScript
-+ DOM
-+ BOM
++ [HTML](./html/readme.md)
++ [CSS](./css/readme.md)
++ [JavaScript](./javascript/readme.md)
++ [DOM](./dom/readme.md)
 + Browser API
 
 进阶
