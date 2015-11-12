@@ -23,7 +23,7 @@ DOM 文档对象模型
 
 HTML 文档在浏览器中被解析成树形数据结构，该数据结构称为节点树（DOM 树/文档树）。
 
-![dom-tree](http://www.w3school.com.cn/i/ct_htmltree.gif)
+![dom-tree](./images/dom-tree.png)
 
 节点树的特征：
 
