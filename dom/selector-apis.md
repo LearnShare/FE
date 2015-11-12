@@ -124,7 +124,7 @@ len = target.length; // len = 2
 ```
 
 ```js
-var target = document.querySelectAll(".target");
+var target = document.querySelectorAll(".target");
 var len = target.length; // len=1
 // 修改 <p>2</p> 的 class
 document.getElementsByTagName("p")[1].className = "target";

@@ -262,12 +262,12 @@ Document 对象
 可用的命令：
 
 + backColor 修改页面背景色（不推荐）
-+ bold 切换 Selection 区域的加粗效果（<b>，IE 中使用 <strong>）
++ bold 切换 Selection 区域的加粗效果（`<b>`，IE 中使用 `<strong>`）
 + contentReadOnly 切换文档可编辑或只读
 + copy 复制 Selection 区域
-+ createLink 从 Selection 区域创建链接（<a>），需要一个 HREF 参数作为链接的地址
++ createLink 从 Selection 区域创建链接（`<a>`），需要一个 HREF 参数作为链接的地址
 + cut 剪切 Selection 区域
-+ decreaseFontSize 缩小 Selection 区域的字号（<small>）
++ decreaseFontSize 缩小 Selection 区域的字号（`<small>`）
 + delete 删除 Selection 区域
 + enableInlineTableEditing 切换是否允许添加和删除表格的行和列
 + enableObjectResizing 切换是否允许图片等内容的大小调整
@@ -278,17 +278,17 @@ Document 对象
 + forwardDelete 从光标处向前删除（等同于点击键盘的 Delete 按键）
 + heading 将 Selection 区域使用标题元素包括，或者在光标处插入标题元素，需要一个标题元素名称作为参数
 + hiliteColor 修改 Selection 区域的背景色，需要一个颜色参数
-+ increaseFontSize 放大 Selection 区域的字号（<big>）
++ increaseFontSize 放大 Selection 区域的字号（`<big>`）
 + indent 缩进 Selection 区域，或者光标所在区域
-+ insertBrOnReturn 使用软回车（<br>）
-+ insertHorizontalRule 插入水平线（<hr>）
++ insertBrOnReturn 使用软回车（`<br>`）
++ insertHorizontalRule 插入水平线（`<hr>`）
 + insertHTML 在光标处插入 HTML 内容，需要一段 HTML 代码作为参数
-+ insertImage 在光标处插入图像（<image>），需要一个 URL 参数作为图像的地址
-+ insertOrderedList 从 Selection 创建有序列表（<ol>），或在光标处插入有序列表
-+ insertUnorderedList 从 Selection 创建无序列表（<ul>），或在光标处插入无序列表
++ insertImage 在光标处插入图像（`<image>`），需要一个 URL 参数作为图像的地址
++ insertOrderedList 从 Selection 创建有序列表（`<ol>`），或在光标处插入有序列表
++ insertUnorderedList 从 Selection 创建无序列表（`<ul>`），或在光标处插入无序列表
 + insertParagraph 将 Selection 区域或光标所在的行用段落包括
 + insertText 删除 Selection，并在光标处插入文本
-+ italic 切换 Selection 区域的斜体效果（<i>，IE 中使用 <em>）
++ italic 切换 Selection 区域的斜体效果（`<i>`，IE 中使用 `<em>`）
 + justifyCenter 将 Selection 区域或光标所在的内容居中对齐
 + justifyFull 将 Selection 区域或光标所在的内容两端对齐
 + justifyLeft 将 Selection 区域或光标所在的内容左对齐
@@ -298,10 +298,10 @@ Document 对象
 + redo 重做上一个被撤销的动作
 + removeFormat 清除 Selection 区域的格式
 + selectAll 选中可编辑区域的所有内容
-+ strikeThrough 切换 Selection 区域的删除线效果（<del>）
-+ subscript 切换 Selection 区域的上标效果（<sub>）
-+ superscript 切换 Selection 区域的下标效果（<sup>）
-+ underline 切换 Selection 区域的下划线效果（<u>）
++ strikeThrough 切换 Selection 区域的删除线效果（`<del>`）
++ subscript 切换 Selection 区域的上标效果（`<sub>`）
++ superscript 切换 Selection 区域的下标效果（`<sup>`）
++ underline 切换 Selection 区域的下划线效果（`<u>`）
 + undo 撤销上一个动作
 + unlink 清除 Selection 区域的链接
 + styleWithCSS 切换使用 HTML 或 CSS 来生成格式化的代码
