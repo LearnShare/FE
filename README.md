@@ -10,7 +10,7 @@ All about Front End development. 前端开发的一切。
 + [CSS](./css/readme.md)
 + [JavaScript](./javascript/readme.md)
 + [DOM](./dom/readme.md)
-+ Browser API
++ [Browser API](./browser-api/readme.md)
 
 进阶
 ----
@@ -22,13 +22,24 @@ All about Front End development. 前端开发的一切。
 + CoffeeScript
 + TypeScript
 
+规范化
+----
+
++ JSLint
++ CSSLint
++ 测试
+
 工具
 ----
 
 + 编辑器
 + IDE
 + Git
++ 浏览器开发者工具
 + 调试工具
++ Bower
++ Grunt
++ Gulp
 
 高级
 ----
