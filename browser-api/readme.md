@@ -4,7 +4,37 @@
 Window
 ----
 
+参考：[window](./window.md)
+
+Navigator
+----
+
+参考：[navigator](./navigator.md)
+
+Screen
+----
+
+参考：[screen](./screen.md)
+
 Location
+----
+
+参考：[location](./location.md)
+
+History
+----
+
+参考：[history](./history.md)
+
+XHR
+----
+
+参考：[XMLHttpRequest](./xhr.md)
+
+Fetch
+----
+
+Console
 ----
 
 数据存储
@@ -65,10 +95,12 @@ Location
 其他
 ----
 
+### Timer
+
 ### 页面可见
 
 ### 鼠标捕获
 
 ### 全屏
 
-### Worker
+### Web Worker
