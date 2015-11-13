@@ -153,7 +153,7 @@ link.addEventListener('click', function(e) {
 阻止冒泡
 ----
 
-事件冒泡是一个有趣的机制，它让我们可以在父元素中监听子元素以及父元素本身发生的事件（参考：事件委托）。但有时候我们需要严格区分事件发生在当前元素，还是子元素。这时候可以组织事件冒泡（向上传播）：
+事件冒泡是一个有趣的机制，它让我们可以在父元素中监听子元素以及父元素本身发生的事件（参考：事件委托）。但有时候我们需要严格区分事件发生在当前元素，还是子元素。这时候可以阻止事件冒泡（向上传播）：
 
 ```html
 <div id="a">
@@ -220,3 +220,8 @@ list.addEventListener('click', function(e) {
 ----
 
 参考：[MDN: Events](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+Event 对象
+----
+
+参考：[Event](./event.md)

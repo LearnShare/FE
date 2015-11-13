@@ -61,7 +61,7 @@ document 对象提供了从文档中查找元素/集合的方法：
 ### 读取/设置 HTML 属性
 
 + node.attributes nodeList 属性列表 node.attributes[0].nodeName（属性名）/.nodeValue（属性值）
-+ elmt.classList 数组 ["class0","class1",...]
++ elmt.classList 数组 ["class0", "class1", ...]
 + elmt.name str name 属性值
 + elmt.className str class 属性值
 + elmt.getAttribute("attr")  str attr 属性值
@@ -69,14 +69,14 @@ document 对象提供了从文档中查找元素/集合的方法：
 + elmt.hasAttribute("attr") true/false
 + elmt.hasAttributes()  true/false
 + elmt.removeAttribute("attr")
-+ elmt.setAttributeNode("attr","value")
++ elmt.setAttributeNode(attrNode)
 
 参考：[node](./node.md) 和 [element](./element.md)
 
 ### 读取/修改 HTML 内容
 
 + elmt.innerHTML
-+ elmt.ouerHTML
++ elmt.outerHTML
 + textNode.nodeValue
 
 访问节点树
@@ -92,23 +92,24 @@ document 对象提供了从文档中查找元素/集合的方法：
 + node.nextSibling 下一个兄弟节点
 + node.previousSibling  上一个兄弟节点
 + node.parentNode 父节点
++ node.parentElement 父元素
 + node.textContent 所有文本，包含特殊字符（换行等）
-+ node.hasChildNodes() true/false
++ node.hasChildNodes() 是否包含子节点
 
 ### 添加/复制/删除节点
 
-+ node.appendChild(child)
-+ node.cloneNode(child)
-+ node.insertBefore(newNode,target)
-+ node.removeChild(child)
-+ node.replaceChild(child)
++ node.appendChild(child) 添加子节点到末尾
++ node.cloneNode(child) 复制节点
++ node.insertBefore(newNode, target) 添加子节点到指定位置
++ node.removeChild(child) 删除子节点
++ node.replaceChild(child) 替换子节点
 
 访问节点样式
 ----
 
-### node.style
+### elmt.style
 
-node.style 属性代表了节点的 CSS 样式，可通过它来访问/操作节点的样式：
+elmt.style 属性代表了节点的 CSS 样式，可通过它来访问/操作节点的样式：
 
 ```js
 var target = document.getElementById("target");
@@ -131,8 +132,8 @@ background-color --> backgroundColor
 如果需要修改大量节点的样式，或者需要修改大量样式，建议先在 CSS 中编写好样式，然后通过 JS 修改节点的 class/id 等属性值，使其应用相应的样式：
 
 ```css
-.blue{
-  color:#00F;
+.blue {
+  color: #00F;
 }
 ```
 
@@ -140,10 +141,19 @@ background-color --> backgroundColor
 document.getElementsByClassName("target").className += " blue";
 ```
 
-API
+HTML 元素
 ----
 
-### Drag & Drop
+参考：[html-elements](./html-elements/readme.md)
+
+应用专题
+----
+
+### 尺寸和位置
+
+### 拖放
+
+### slider
 
 事件
 ----

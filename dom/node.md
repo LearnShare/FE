@@ -111,7 +111,7 @@ ul#ul1 的首个子节点为 li{01}，但 ul#ul2 的首个子节点为文本节�
 
 ### parentNode
 
-返回当前节点的父节点。
+返回当前节点的父节点（单个节点）。
 
 ```html
 <ul>
@@ -130,7 +130,7 @@ li.parentNode;
 
 ### parentElement
 
-返回当前节点的父元素节点，如果没有父元素，或者父节点不是元素，则返回 null。
+返回当前节点的父元素节点（包含所有子节点），如果没有父元素，或者父节点不是元素，则返回 null。
 
 ### previousSibling
 
@@ -149,7 +149,7 @@ li.parentNode;
 
 ### appendChild()
 
-插入子节点。
+插入子节点（作为当前节点最后一个子节点）。
 
 语法：
 >node.addendChild(childNode);
@@ -165,7 +165,7 @@ li.parentNode;
 >node.cloneNode(cloneChild);
 
 参数：
->cloneChild 是否克隆子节点
+>cloneChild 是否包含子节点
 
 返回值：
 >clone node 节点的副本

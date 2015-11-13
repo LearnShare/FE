@@ -12,12 +12,12 @@ Document、Element、DocumentFragment 都实现了此接口。
 
 ### firstElementChild
 
-返回当前元素的首个子节点，或 null。
+返回当前元素的首个子元素，或 null。
 
 ### lastElementChild
 
-返回当前元素的最后一个子节点，或 null。
+返回当前元素的最后一个子元素，或 null。
 
 ### childElementCount
 
-返回当前元素的子节点总数。
+返回当前元素的子元素总数。
