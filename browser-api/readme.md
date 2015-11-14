@@ -1,48 +1,48 @@
 浏览器 API
 ====
 
-Window
+浏览器访问
 ----
+
+### Window
 
 参考：[window](./window.md)
 
-Navigator
-----
+### Navigator
 
 参考：[navigator](./navigator.md)
 
-Screen
-----
+### Screen
 
 参考：[screen](./screen.md)
 
-Location
-----
+### Location
 
 参考：[location](./location.md)
 
-History
-----
+### History
 
 参考：[history](./history.md)
 
-XHR
+### Console
+
+网络访问
 ----
 
-参考：[XMLHttpRequest](./xhr.md)
+### XHR
 
-Fetch
-----
+参考：[xhr](./xhr.md)
 
-Console
-----
+### Fetch
+
+### Web Socket
 
 数据存储
 ----
 
-### cookie
+### Cookie
 
-### senssion
+### Session
 
 ### LocalStorage
 
@@ -50,12 +50,25 @@ Console
 
 ### IndexedDB
 
-### WebSQL
+### Web SQL
 
-### App Cache
+### App Cache/Offline App
+
+媒体
+----
+
+### Audio
+
+### Video
+
+### SVG/D3.js
+
+### Canvas/WebGL
 
 设备访问
 ----
+
+### 文件
 
 ### 定位
 
@@ -79,19 +92,6 @@ Console
 
 ### 消息推送
 
-媒体
-----
-
-### Video
-
-### Audio
-
-### WebGL
-
-### 录像
-
-### 录音
-
 其他
 ----
 
@@ -102,5 +102,7 @@ Console
 ### 鼠标捕获
 
 ### 全屏
+
+### 鼠标捕获
 
 ### Web Worker

@@ -31,7 +31,6 @@ Document 对象
 
 返回正在执行的 JS 所属的 script 元素。
 
-// TODO
 ### cookie
 
 以分号分隔列表的形式返回所有 cookie，也可以通过 cookie="key1=value1;key2=value2" 设置 cookie 值。
