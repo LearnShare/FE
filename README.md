@@ -21,6 +21,7 @@ All about Front End development. 前端开发的一切。
 + Stylus
 + CoffeeScript
 + TypeScript
++ Font Icon
 
 规范化
 ----
@@ -40,6 +41,18 @@ All about Front End development. 前端开发的一切。
 + Bower
 + Grunt
 + Gulp
++ Photoshop
+
+框架和库
+----
+
++ Normalize.css
++ Font-Awesome
++ Bootstrap
++ jQuery
++ Angular.js
++ React
++ D3.js
 
 高级
 ----
