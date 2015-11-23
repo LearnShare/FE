@@ -6,25 +6,27 @@
 
 ### Window
 
-参考：[window](./window.md)
+参考：[window](./browser/window.md)
 
 ### Navigator
 
-参考：[navigator](./navigator.md)
+参考：[navigator](./browser/navigator.md)
 
 ### Screen
 
-参考：[screen](./screen.md)
+参考：[screen](./browser/screen.md)
 
 ### Location
 
-参考：[location](./location.md)
+参考：[location](./browser/location.md)
 
 ### History
 
-参考：[history](./history.md)
+参考：[history](./browser/history.md)
 
 ### Console
+
+参考：[console](./browser/console.md)
 
 网络访问
 ----
