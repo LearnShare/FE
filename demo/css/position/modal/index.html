@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo: CSS position - modal</title>
+  <link rel="stylesheet" href="./modal.css">
+  <script src="./modal.js"></script>
+</head>
+<body>
+  <article>
+    <section>
+      <h2>Dialog</h2>
+      <div class="btn"
+          onclick="openDialog()">Open</div>
+      <div class="modal dialog">
+        <div class="close" title="close"
+            onclick="closeDialog()">&times;</div>
+        <div class="content">dialog</div>
+      </div>
+    </section>
+    <section>
+      <h2>Overlay</h2>
+      <div class="btn"
+          onclick="openOverlay()">Open</div>
+      <div class="overlay"
+          onclick="hideOverlay(event)">
+        <div class="modal">
+          <div class="close" title="close"
+              onclick="closeOverlay()">&times;</div>
+          <div class="content">overlay</div>
+        </div>
+      </div>
+    </section>
+  </article>
+</body>
+</html>
