@@ -1,0 +1,41 @@
+section {
+  min-height: 140px;
+}
+.dropdown {
+  width: 160px;
+  position: relative;
+}
+.btn {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: solid 5px #AAF;
+}
+.panel {
+  border: solid 5px #FAA;
+  background-color: #EEE;
+}
+
+.dropdown-1 .panel {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.dropdown-2 .panel,
+.dropdown-3 .panel {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-3 .panel,
+.dropdown-4 .panel {
+  display: none;
+}
+.dropdown-3:hover .panel,
+.dropdown-4.active .panel {
+  display: block;
+}
