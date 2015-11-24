@@ -66,3 +66,29 @@ CSS:
 }
 /* .overlay 中的 .modal 相对于 .overlay 进行定位 */
 ```
+
+JS:
+
+```js
+// 查找 .overlay，并显示
+function openOverlay() {
+  var modal = document.getElementsByClassName('overlay')[0];
+  
+  modal.style.display = 'block';
+}
+// 查找 .overlay，并隐藏
+function closeOverlay() {
+  var modal = document.getElementsByClassName('overlay')[0];
+  
+  modal.style.display = 'none';
+}
+
+// 判断被点击的是否为 .overlay 本身（不是子元素被点击）。如果是，则隐藏
+function hideOverlay(e) {
+  var modal = document.getElementsByClassName('overlay')[0];
+  
+  if(e.target === modal) {
+    closeOverlay();
+  }
+}
+```
