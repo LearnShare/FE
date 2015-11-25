@@ -71,6 +71,10 @@ JavaScript 语法
 
 参考：[objects](./objects.md)
 
+### 类型转换
+
+参考：[data-transfer](./data-transfer.md)
+
 数组
 ----
 

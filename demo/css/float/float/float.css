@@ -1,0 +1,12 @@
+.float-none {
+  float: none;
+  background-color: #E5E5E5;
+}
+.float-left {
+  float: left;
+  background-color: #CCF;
+}
+.float-right {
+  float: right;
+  background-color: #CCF;
+}
