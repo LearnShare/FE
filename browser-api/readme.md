@@ -33,11 +33,15 @@
 
 ### XHR
 
-参考：[xhr](./xhr.md)
+参考：[xhr](./network/xhr.md)
 
 ### Fetch
 
+参考：[fetch](./network/fetch.md)
+
 ### Web Socket
+
+参考：[web-socket](./network/web-socket.md)
 
 数据存储
 ----
