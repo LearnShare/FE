@@ -71,6 +71,8 @@
 
 ### Canvas/WebGL
 
+[Canvas](./media/canvas.md)
+
 设备访问
 ----
 
