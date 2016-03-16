@@ -56,13 +56,11 @@ type：
 >webgl2 WebGL version 2 (OpenGL ES 3.0)
 >bitmaprenderer ImageBitmapRenderingContext
 
-本文主要讲解 CanvasRenderingContext2D。
+本文主要讲解 [CanvasRenderingContext2D](./context-2d.md)。
 
 ```js
 var context = canvas.getContext('2d');
 ```
-
-[CanvasRenderingContext2D API](./context-2d.md)
 
 ### toDataURL()
 
