@@ -33,6 +33,15 @@ canvas 中的坐标和浏览器中的规则一样，以左上角为原点（0, 0
 
 属性值与 `fillStyle` 相同。
 
+渐变和材质
+----
+
+### createLinearGradient()
+
+### createRadialGradient()
+
+### createPattern()
+
 线段样式
 ----
 
@@ -171,6 +180,31 @@ context.fillText('Draw Text Here', 100, 40);
 参数：
 >text 要计算尺寸的文本内容。
 
+阴影
+----
+
+### shadowBlur
+
+设置阴影的模糊程度。
+
+属性值：
+>level 模糊数值（默认为 0）。
+
+### shadowColor
+
+设置阴影颜色。
+
+属性值：
+>color CSS 颜色值（默认为 #000）。
+
+### shadowOffsetX
+
+设置阴影水平方向的偏移量。
+
+### shadowOffsetY
+
+设置阴影垂直方向的偏移量。
+
 矩形
 ----
 
@@ -195,7 +229,7 @@ context.fillRect(0, 0, 100, 100);
 绘制矩形区域的轮廓，样式取决于 `strokeStyle` 的值。
 
 参数：
->与 fillRect() 相同。
+>与 `fillRect()` 相同。
 
 ```js
 context.strokeStyle = 'green';
@@ -208,7 +242,7 @@ context.strokeRect(110, 0, 40, 100);
 清除矩形区域内的图像（恢复为透明）。
 
 参数：
->与 fillRect() 相同。
+>与 `fillRect()` 相同。
 
 ```js
 context.fillStyle = 'green';
@@ -217,3 +251,111 @@ context.fillRect(160, 0, 100, 100);
 
 context.clearRect(190, 30, 40, 40);
 ```
+
+路径
+----
+
+### beginPath()
+
+清空子路径，并开始新的路径。
+
+### closePath()
+
+闭合当前路径（如果画笔当前所在的点不是路径起点，则添加一条从当前点到起点的子路径）。
+
+### moveTo()
+
+移动画笔到指定的点。
+
+参数：
+>x 目标点 x 坐标；  
+>y 目标点 y 坐标。
+
+### lineTo()
+
+创建一条从当前点到目标点的子路径。
+
+参数：
+>与 `moveTo()` 相同。
+
+### bezierCurveTo()
+
+### quadraticCurveTo()
+
+### arc()
+
+创建一条圆弧子路径。
+
+参数：
+>x 圆心 x 坐标；  
+>y 圆心 y 坐标；  
+>r 圆半径；  
+>sa 弧线起始角度；  
+>ea 弧线结束角度；  
+>[ac] 是否逆时针绘制（默认为 false，顺时针绘制）。
+
+### arcTo()
+
+根据两个控制点，并以当前位置作为参考绘制圆弧子路径。
+
+参数：
+>x1 控制点 1 x 坐标；  
+>y1 控制点 1 y 坐标；  
+>x2 控制点 2 x 坐标；  
+>y2 控制点 2 y 坐标；
+>r 圆半径。
+
+### ellipse()
+
+创建一条椭圆弧子路径。
+
+参数：
+>x 圆心 x 坐标；  
+>y 圆心 y 坐标；  
+>rx 半长轴；  
+>ry 半短轴；  
+>ro 椭圆旋转角度；  
+>sa 弧线起始角度；  
+>ea 弧线结束角度；  
+>[ac] 是否逆时针绘制。
+
+### rect()
+
+绘制矩形子路径（已闭合）。
+
+参数：
+>和 `fillRect()` 相同。
+
+路径绘制和填充
+----
+
+### fill()
+
+### stroke()
+
+### drawFocusIfNeeded()
+
+### scrollPathIntoView()
+
+### clip()
+
+### isPointInPath()
+
+### isPointInStroke()
+
+变换
+----
+
+### currentTransform
+
+### rotate()
+
+### scale()
+
+### translate()
+
+### transform()
+
+### setTransform()
+
+### resetTransform()
