@@ -121,7 +121,7 @@ context.setLineDash([5, 10]);
 + left 左对齐；
 + right 右对齐；
 + center 居中对齐；
-+ start 对齐到起点（根据文本书写方向对其）；
++ start 对齐到起点（根据文本书写方向对齐）；
 + end 对齐到终点。
 
 ### textBaseline
@@ -145,9 +145,9 @@ context.setLineDash([5, 10]);
 
 可用的方向：
 
-+ ltr
-+ rtl
-+ inherit（默认）。
++ ltr 从左向右；
++ rtl 从右向左；
++ inherit 继承（默认）。
 
 文本
 ----
@@ -180,6 +180,11 @@ context.fillText('Draw Text Here', 100, 40);
 参数：
 >text 要计算尺寸的文本内容。
 
+返回值：
+>TextMetrics: {
+  width: 文本宽度
+}
+
 阴影
 ----
 
@@ -210,7 +215,7 @@ context.fillText('Draw Text Here', 100, 40);
 
 ### fillRect()
 
-填充矩形区域，样式取决于 `fillStyle` 的值。
+填充矩形区域。
 
 参数：
 >x 矩形左上角 x 坐标；  
@@ -226,7 +231,7 @@ context.fillRect(0, 0, 100, 100);
 
 ### strokeRect()
 
-绘制矩形区域的轮廓，样式取决于 `strokeStyle` 的值。
+绘制矩形区域的轮廓。
 
 参数：
 >与 `fillRect()` 相同。
@@ -239,7 +244,7 @@ context.strokeRect(110, 0, 40, 100);
 
 ### clearRect()
 
-清除矩形区域内的图像（恢复为透明）。
+清除矩形区域内的图像。
 
 参数：
 >与 `fillRect()` 相同。
@@ -331,7 +336,26 @@ context.clearRect(190, 30, 40, 40);
 
 ### fill()
 
+填充路径。
+
+```js
+context.fill();
+context.fill(rule);
+context.fill(path, rule);
+```
+
+参数：
+>rule 填充规则（nonezero: 非空，evenodd: 异或。参考 [Wiki: Nonzero-rule](https://en.wikipedia.org/wiki/Nonzero-rule)）；  
+>path 路径（`Path2D`）。
+
 ### stroke()
+
+对当前路径进行描边。
+
+```js
+context.stroke();
+context.stroke(path);
+```
 
 ### drawFocusIfNeeded()
 
@@ -341,7 +365,23 @@ context.clearRect(190, 30, 40, 40);
 
 ### isPointInPath()
 
+判断指定的点是否在路径中。
+
+```js
+context.isPointInPath(x, y);
+context.isPointInPath(x, y, rule);
+context.isPointInPath(path, x, y);
+context.isPointInPath(path, x, y, rule);
+```
+
 ### isPointInStroke()
+
+判断指定的点是否在路径的轮廓上。
+
+```js
+context.isPointInStroke(x, y);
+context.isPointInStroke(path, x, y);
+```
 
 变换
 ----
@@ -350,12 +390,72 @@ context.clearRect(190, 30, 40, 40);
 
 ### rotate()
 
+对画布进行旋转。
+
+```js
+context.rotate(angle);
+```
+
+参数：
+>angle 旋转角度（弧度，正数为顺时针）。
+
 ### scale()
+
+对画布进行缩放。
+
+```js
+context.scale(2, 4);
+```
+
+参数：
+>x 横向缩放倍数；  
+>y 纵向缩放倍数。
 
 ### translate()
 
+对画布进行平移。
+
+```js
+context.translate(10, 20);
+```
+
+参数：
+>x 横向平移距离；  
+>y 纵向平移距离。
+
 ### transform()
+
+对画布进行矩阵变形。
+
+```js
+context.transform(1, 1, 0, 1, 1, 0);
+```
+
+参数：
+>a 横向拉伸；  
+>b 横向倾斜；  
+>c 纵向倾斜；  
+>d 纵向拉伸；  
+>e 横向平移；  
+>f 纵向平移。
+
+变形矩阵：
+
+```
+  a c e
+[ b d f ]
+  0 0 1
+```
 
 ### setTransform()
 
+类似于 `transform()`，不过会覆盖当前的变形参数。
+
 ### resetTransform()
+
+重置画布的变形参数。
+
+其他
+----
+
+### Path2D
