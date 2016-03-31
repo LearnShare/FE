@@ -1,7 +1,7 @@
 CanvasRenderingContext2D
 ====
 
-参考：[CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
+参考：[CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) [HTML5 Canvas Tutorials](http://www.html5canvastutorials.com/)
 
 ```js
 var canvas = document.getElementById('canvas');
@@ -38,9 +38,57 @@ canvas 中的坐标和浏览器中的规则一样，以左上角为原点（0, 0
 
 ### createLinearGradient()
 
+创建线性渐变（方向和尺寸）。
+
+参数：
+>x0 起点 x 坐标；  
+>y0 起点 y 坐标；  
+>x1 终点 x 坐标；  
+>y1 终点 y 坐标。
+
+返回值：
+>CanvasGradient
+
 ### createRadialGradient()
 
+创建径向渐变（内外环圆心和尺寸）。
+
+参数：
+>x0 起始环圆心 x 坐标；  
+>y0 起始环圆心 y 坐标；  
+>r0 起始环半径；  
+>x1 结束环圆心 x 坐标；  
+>y1 结束环圆心 y 坐标；  
+>r1 结束环半径。
+
+返回值：
+>CanvasGradient
+
+### CanvasGradient
+
+渐变对象。
+
+#### addColorStop()
+
+向渐变中添加断点。
+
+参数：
+>offset 断点位置（0~1，0 为渐变起点，1 为渐变终点）；  
+>color CSS 颜色值。
+
 ### createPattern()
+
+创建材质。
+
+参数：
+>img 图像数据源（CanvasImageSource，可以是 `HTMLImageElement`, `HTMLVideoElement`, `HTMLCanvasElement`, `CanvasRenderingContext2D`, `ImageBitmap`, `ImageData`, 或 `Blob`）；  
+>repeat 平铺规则。
+
+平铺规则：
+>repeat-x 横向平铺；  
+>repeat-y 纵向平铺；  
+>repeat 横向、纵向平铺（默认）；  
+>no-repeat 不平铺。
 
 线段样式
 ----
@@ -285,7 +333,27 @@ context.clearRect(190, 30, 40, 40);
 
 ### bezierCurveTo()
 
+绘制三次贝塞尔曲线。
+
+参数：
+>c1x 控制点 1 x 坐标；  
+>c1y 控制点 1 y 坐标；  
+>c2x 控制点 2 x 坐标；  
+>c2y 控制点 2 y 坐标；  
+>x 目标点 x 坐标；  
+>y 目标点 y 坐标。
+
+参考：[Wiki: 贝兹曲线](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A) 和 [Vimeo: Cubic Bezier Curves](https://vimeo.com/106757336)
+
 ### quadraticCurveTo()
+
+绘制二次贝塞尔曲线。
+
+参数：
+>cx 控制点 x 坐标；  
+>cy 控制点 y 坐标；  
+>x 目标点 x 坐标；  
+>y 目标点 y 坐标。
 
 ### arc()
 
@@ -455,7 +523,120 @@ context.transform(1, 1, 0, 1, 1, 0);
 
 重置画布的变形参数。
 
+混合
+----
+
+### globalAlpha
+
+设置或获取全局的透明度值（会影响图形和图像的透明度，仅对设置该值之后的绘制动作生效）。
+
+属性值：
+>alpha 透明度（0: 完全透明；1: 不透明[默认]）。
+
+### globalCompositeOperation
+
+设置或获取全局混合选项。
+
+属性值：
+>source-over  
+>source-in  
+>source-out  
+>source-atop  
+>destination-over  
+>destination-in  
+>destination-out  
+>destination-atop  
+>lighter  
+>copy  
+>xor  
+>multiply  
+>screen  
+>overlay  
+>darken  
+>lighten  
+>color-dodge  
+>color-burn  
+>hard-light  
+>soft-light  
+>difference  
+>exclusion  
+>hue  
+>saturation  
+>color  
+>luminosity
+
+参考：[Photoshop 混合模式](https://helpx.adobe.com/cn/photoshop/using/blending-modes.html)
+
+绘制图像
+----
+
+### drawImage()
+
+将图像绘制到画布上。
+
+```js
+context.drawImage(img, dx, dy);
+context.drawImage(img, dx, dy, dw, dh);
+context.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);
+```
+
+参数：
+>img 要绘制的图像数据（`CanvasImageSource`， 可以是 `HTMLImageElement`, `HTMLVideoElement`, `HTMLCanvasElement` 或 `ImageBitmap`）。
+>sx 图像裁剪起点 x 坐标；  
+>sy 图像裁剪起点 y 坐标；  
+>sw 图像裁剪宽度；  
+>sh 图像裁剪高度；  
+>dx 绘制到画布的起点 x 坐标；  
+>dy 绘制到画布的起点 y 坐标；  
+>dw 绘制到画布的宽度；  
+>dh 绘制到画布的高度。
+
+如果 'dw != sw' 或 'dh != sh'，将会对裁剪的图像进行变形（拉伸或压缩），然后绘制到画布上。
+
+状态
+----
+
+### save()
+
+保存画布当前的状态参数，以便通过 `restore()` 恢复到上一个状态。
+
+会被保存的状态包括：
+>变形矩阵；  
+>剪切边界；  
+>虚线规则；  
+>画笔/填充样式；  
+>线条样式；  
+>阴影样式；  
+>文本属性；  
+>透明度、混合选项及平滑属性。
+
+### restore()
+
+恢复画布到上一个被保存的状态。
+
+### canvas
+
+返回当前 `context` 所属的 `Canvas` 元素。
+
+碰撞边界
+----
+
+### addHitRegion()
+
+### removeHitRegion()
+
+### clearHitRegions()
+
 其他
 ----
 
+### imageSmoothingEnabled
+
+设置或获取是否平滑图像。
+
+属性值：
+>boolean 是否平滑图像（true: 平滑[默认]；false: 不平滑）。
+
 ### Path2D
+
+### ImageData
