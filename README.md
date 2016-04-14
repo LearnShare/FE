@@ -38,7 +38,7 @@ All about Front End development. 前端开发的一切。
 + 浏览器开发者工具
 + 调试工具
 + npm/Bower
-+ Grunt/Gulp
++ Grunt/Gulp/npm script/GNU Make
 + Photoshop
 
 框架和库
@@ -57,7 +57,7 @@ All about Front End development. 前端开发的一切。
 高级
 ----
 
-+ 模块化（Browserfy/Webpack/RequireJS/SystemJS）
++ 模块化（Browserfy/Webpack/RequireJS/[SystemJS](./modular/system.js.md)）
 + 工程化
 + 性能
 + 安全
@@ -67,6 +67,8 @@ All about Front End development. 前端开发的一切。
 ----
 
 + HTTP
++ RESTful
++ WebSocket/Socket.io
 + Node.js
 + Cache/CDN
 
