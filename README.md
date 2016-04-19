@@ -16,17 +16,18 @@ All about Front End development. 前端开发的一切。
 ----
 
 + Emmet
-+ Jade
++ ~~Jade~~ Pug
 + LESS/SASS/Stylus
 + PostCSS
 + CoffeeScript
 + TypeScript
++ Babel/Traceur
 + Font Icon
 
 规范化
 ----
 
-+ JSLint
++ JSHint/ESLint
 + CSSLint
 
 工具
@@ -39,7 +40,7 @@ All about Front End development. 前端开发的一切。
 + 调试工具
 + npm/Bower
 + Grunt/Gulp/npm script/GNU Make
-+ Photoshop
++ Photoshop/Illustrator/Sketch
 
 框架和库
 ----
@@ -47,9 +48,9 @@ All about Front End development. 前端开发的一切。
 + Normalize.css/reset.css
 + Font-Awesome
 + Bootstrap/Foundation/Semantic UI
-+ jQuery
-+ Angular.js
-+ React
++ Sizzle/jQuery/Zepto
++ Angular.js 1/2
++ React/JSX
 + D3.js/Highcharts
 + NativeScript/React Native/Cordova/Ionic
 + NW.js/Electron/React Native Desktop
