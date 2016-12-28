@@ -33,14 +33,14 @@ All about Front End development. 前端开发的一切。
 工具
 ----
 
++ [Markdown](https://github.com/LearnShare/Learning-Markdown)
 + 编辑器 Sublime Text/Atom/Bracket/VS Code
 + IDE WebStorm
 + Git SourceTree/Github Desktop, Github/Bitbucket/Gitlab
 + 浏览器开发者工具
 + 调试工具
-+ 依赖管理 npm/Bower/jspm
++ 依赖管理 npm/yarn/Bower/jspm
 + 构建工具 Grunt/Gulp/npm script/GNU Make
-+ 设计工具 Photoshop/Illustrator/Sketch
 + 其他 LiveReload/*watch/CI
 
 框架和库
@@ -63,6 +63,9 @@ All about Front End development. 前端开发的一切。
 
 + 响应式
 + Material Design
++ 设计工具 Photoshop/Illustrator/Sketch
++ 交互设计工具 Adobe XD/InVision/Origami Studio
++ 其他 Markman
 
 高级
 ----
