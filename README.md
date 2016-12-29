@@ -71,6 +71,7 @@ All about Front End development. 前端开发的一切。
 ----
 
 + 模块化 RequireJS/[SystemJS](./modular/system.js.md)/jspm/Browserfy/Webpack
++ 组件化 Directive(ng1)/Component(ng2/Vue/React)/Shadow DOM(W3C, Polymer)
 + 工程化
 + 性能
 + 安全
