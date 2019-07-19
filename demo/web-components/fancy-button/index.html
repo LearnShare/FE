@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FancyButton</title>
+
+  <style>
+    button {
+      border: solid 2px currentColor;
+      border-radius: 4px;
+      padding: 4px 12px;
+      font-size: 14px;
+      line-height: 24px;
+      color: #B3D;
+      background-color: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      outline: none;
+    }
+    button:hover {
+      background-color: #EEE;
+    }
+  </style>
+</head>
+<body>
+    <button>BUTTON</button>
+    <button is="fancy-button">FANCY</button>
+
+  <script src="./fancy-button.js"></script>
+</body>
+</html>
