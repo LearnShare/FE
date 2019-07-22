@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Template</title>
+
+  <style>
+    #cards {
+      font-size: 0;
+    }
+
+    user-card .user-name {
+      display: block;
+      font-size: 14px;
+      line-height: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <template id="the-template">
+    <style>
+      .card {
+        display: inline-block;
+        margin-right: 10px;
+        border: solid 1px #CCC;
+        padding: 10px;
+        padding-bottom: 4px;
+        width: 80px;
+        height: 110px;
+        text-decoration: none;
+        user-select: none;
+        vertical-align: middle
+      }
+
+      .card img {
+        display: block;
+        width: 80px;
+        height: 80px;
+      }
+
+      slot[name="user-name"] {
+        display: block;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+      }
+    </style>
+    <a class="card" href="https://github.com/LearnShare" target="_blank">
+      <img src="https://avatars1.githubusercontent.com/u/3265208?s=40&v=4">
+      <slot name="user-name">DEFAULT</slot>
+    </a>
+  </template>
+
+  <div id="cards">
+    <user-card>
+      <span slot="user-name" class="user-name">LearnShare</span>
+    </user-card>
+    <user-card>
+      <span slot="user-name" class="user-name">H-Labs</span>
+    </user-card>
+    <user-card></user-card>
+  </div>
+
+  <script src="./user-card.js"></script>
+</body>
+</html>

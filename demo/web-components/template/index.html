@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Template</title>
+
+  <style>
+    #cards {
+      font-size: 0;
+    }
+
+    .card {
+      display: inline-block;
+      margin-right: 10px;
+      border: solid 1px #CCC;
+      padding: 10px;
+      padding-bottom: 4px;
+      width: 80px;
+      height: 110px;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .card img {
+      display: block;
+      width: 80px;
+      height: 80px;
+    }
+
+    .card span {
+      display: block;
+      font-size: 14px;
+      line-height: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <template id="the-template">
+    <a class="card" href="#" target="_blank">
+      <img src="">
+      <span></span>
+    </a>
+  </template>
+
+  <div id="cards"></div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const list = [{
+        name: 'LearnShare',
+        avatar: 'https://avatars1.githubusercontent.com/u/3265208?s=40&v=4',
+        url: 'https://github.com/LearnShare',
+      }, {
+        name: 'H-Labs',
+        avatar: 'https://avatars1.githubusercontent.com/u/3271242?s=200&v=4',
+        url: 'https://github.com/H-Labs',
+      }];
+
+      list.forEach((item) => {
+        addCard(item.name, item.avatar, item.url);
+      });
+    });
+
+    const addCard = (name, avatar, url) => {
+      // 获取并导入模板内容
+      const template = document.getElementById('the-template');
+      const content = document.importNode(template.content, true);
+
+      // 修改内容
+      const a = content.querySelectorAll('a')[0];
+      a.setAttribute('href', url);
+
+      const img = content.querySelectorAll('img')[0];
+      img.setAttribute('src', avatar);
+
+      const span = content.querySelectorAll('span')[0];
+      span.textContent = name;
+
+      // 插入到网页中
+      const container = document.getElementById('cards');
+      container.appendChild(content);
+    };
+  </script>
+</body>
+</html>
