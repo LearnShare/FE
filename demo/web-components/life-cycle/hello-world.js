@@ -26,14 +26,10 @@ class HelloWorld extends HTMLElement {
     console.log('disconnected');
   }
 
-  adoptedCallbackCallback() {
-    console.log('adoptedCallback');
-  }
+  attributeChangedCallback(attrName, oldValue, newValue) {
+    console.log('attributeChanged', attrName, oldValue, newValue);
 
-  attributeChangedCallback(attr, oldValue, newValue) {
-    console.log('attributeChanged', attr, oldValue, newValue);
-
-    if (attr === 'message'
+    if (attrName === 'message'
         && newValue !== oldValue) {
       this.container.textContent = newValue;
     }
